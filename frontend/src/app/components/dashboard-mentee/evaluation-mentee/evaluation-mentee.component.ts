@@ -83,7 +83,7 @@ export class EvaluationMenteeComponent implements OnInit {
         "action": 7
       }
       console.log(data)
-      this.requestService.post("http://127.0.0.1:8000/api/evaluation/", data).then(
+      this.requestService.post("https://mentor-me-7viu.onrender.com/api/evaluation/", data).then(
         (res: any) => {
           if (res.data) {
             this.chargeEvaluation()

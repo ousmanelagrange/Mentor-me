@@ -67,7 +67,7 @@ export class SessionMentorComponent implements OnInit {
     this.changeActive(3)
     this.initFormmentor()
     this.loading = true
-    this.requestService.getAll("http://127.0.0.1:8000/api/disponibilites/").then(
+    this.requestService.getAll("https://mentor-me-7viu.onrender.com/api/disponibilites/").then(
       (res: any) => {
         this.disponibilite = res.results
         console.log(this.disponibilite)
@@ -89,7 +89,7 @@ export class SessionMentorComponent implements OnInit {
           "action": 2,
           "mentor": user.id
         };
-        this.requestService.post("http://127.0.0.1:8000/api/sessions/", data).then(
+        this.requestService.post("https://mentor-me-7viu.onrender.com/api/sessions/", data).then(
           (res: any) => {
             console.log(res)
             this.sessions = res
@@ -121,7 +121,7 @@ export class SessionMentorComponent implements OnInit {
         "action": 1
       }
       console.log(data)
-      this.requestService.post("http://127.0.0.1:8000/api/sessions/", data).then(
+      this.requestService.post("https://mentor-me-7viu.onrender.com/api/sessions/", data).then(
         (res: any) => {
           if (res.data) {
             this.chargeSession()

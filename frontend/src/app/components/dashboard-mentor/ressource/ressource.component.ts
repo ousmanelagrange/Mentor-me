@@ -58,7 +58,7 @@ export class RessourceComponent implements OnInit {
           "id": user.id,
           "type_user": "mentor"
         }
-        this.requestService.post("http://127.0.0.1:8000/api/connexion/", data).then(
+        this.requestService.post("https://mentor-me-7viu.onrender.com/api/connexion/", data).then(
           (res: any) => {
             this.users = res.data
             console.log(this.users)
@@ -77,7 +77,7 @@ export class RessourceComponent implements OnInit {
     this.changeActive(3)
     this.initFormmentor()
     this.loading = true
-    this.requestService.getAll("http://127.0.0.1:8000/api/domaines_expertise/").then(
+    this.requestService.getAll("https://mentor-me-7viu.onrender.com/api/domaines_expertise/").then(
       (res: any) => {
         this.domaines = res.results
         console.log(this.domaines)
@@ -99,7 +99,7 @@ export class RessourceComponent implements OnInit {
           "action": 4,
           "mentor": user.id
         };
-        this.requestService.post("http://127.0.0.1:8000/api/ressources/", data).then(
+        this.requestService.post("https://mentor-me-7viu.onrender.com/api/ressources/", data).then(
           (res: any) => {
             console.log(res)
             this.ressources = res
@@ -133,7 +133,7 @@ export class RessourceComponent implements OnInit {
         "action": 3
       }
       console.log(data)
-      this.requestService.post("http://127.0.0.1:8000/api/ressources/", data).then(
+      this.requestService.post("https://mentor-me-7viu.onrender.com/api/ressources/", data).then(
         (res: any) => {
           if (res.data) {
             this.chargeRessource()
