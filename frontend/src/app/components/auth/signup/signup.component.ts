@@ -299,7 +299,7 @@ export class SignupComponent implements OnInit {
 
     console.log(data)
 
-    this.requestService.post("http://127.0.0.1:8000/api/mentors/", data).then(
+    this.requestService.post("https://mentor-me-7viu.onrender.com/api/mentors/", data).then(
       (response) => {
         console.log(response)
         this.routerService.routeRoute("/auth/sign-in")
@@ -342,7 +342,7 @@ export class SignupComponent implements OnInit {
 
     console.log(data)
 
-    this.requestService.post("http://127.0.0.1:8000/api/mentees/", data).then(
+    this.requestService.post("https://mentor-me-7viu.onrender.com/api/mentees/", data).then(
       (response) => {
         console.log(response)
         this.routerService.routeRoute("/auth/sign-in")
