@@ -27,7 +27,7 @@ RUN npm run build
 FROM nginx:stable-alpine
 
 # Copier les fichiers construits dans le répertoire par défaut de Nginx
-COPY --from=build /app/dist/mentor-me /usr/share/nginx/html
+COPY --from=build /app/dist/mentor_me /usr/share/nginx/html
 
 # Ajouter une configuration personnalisée pour gérer les routes Angular
 COPY nginx.conf /etc/nginx/conf.d/default.conf
