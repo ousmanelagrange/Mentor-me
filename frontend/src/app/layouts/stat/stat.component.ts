@@ -31,7 +31,7 @@ export class StatComponent implements OnInit {
           "action": 2,
           "mentor": user.id
         };
-        this.requestService.post("http://127.0.0.1:8000/api/sessions/", data).then(
+        this.requestService.post("https://mentor-me-7viu.onrender.com/api/sessions/", data).then(
           (res: any) => {
             console.log(res)
             this.sessions = res
@@ -39,7 +39,7 @@ export class StatComponent implements OnInit {
               "action": 4,
               "mentor": user.id
             };
-            this.requestService.post("http://127.0.0.1:8000/api/ressources/", data).then(
+            this.requestService.post("https://mentor-me-7viu.onrender.com/api/ressources/", data).then(
               (res: any) => {
                 console.log(res)
                 this.ressources = res
@@ -47,14 +47,14 @@ export class StatComponent implements OnInit {
                   "id": user.id,
                   "type_user": "mentor"
                 }
-                this.requestService.post("http://127.0.0.1:8000/api/connexion/", data).then(
+                this.requestService.post("https://mentor-me-7viu.onrender.com/api/connexion/", data).then(
                   (res: any) => {
                     this.mentees = res.data
                     let data = {
                       "action": 8,
                       "mentor": user.id
                     };
-                    this.requestService.post("http://127.0.0.1:8000/api/evaluation/", data).then(
+                    this.requestService.post("https://mentor-me-7viu.onrender.com/api/evaluation/", data).then(
                       (res: any) => {
                         console.log(res)
                         this.evaluations = res
