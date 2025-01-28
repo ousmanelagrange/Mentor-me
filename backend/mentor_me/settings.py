@@ -18,7 +18,8 @@ ALLOWED_HOSTS = ['mentor-me-7viu.onrender.com', 'localhost', '*']
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",
-    "http://localhost:35845"
+    "http://localhost:35845",
+    "https://mentor-me-7viu.onrender.com",
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -56,9 +57,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:4200",
-]
+
 
 ROOT_URLCONF = 'mentor_me.urls'
 

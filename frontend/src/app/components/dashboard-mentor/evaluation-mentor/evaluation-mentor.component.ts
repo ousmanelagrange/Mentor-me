@@ -45,7 +45,7 @@ export class EvaluationMentorComponent implements OnInit {
           "action": 8,
           "mentor": user.id
         };
-        this.requestService.post("http://127.0.0.1:8000/api/evaluation/", data).then(
+        this.requestService.post("https://mentor-me-7viu.onrender.com/api/evaluation/", data).then(
           (res: any) => {
             console.log(res)
             this.evaluations = res

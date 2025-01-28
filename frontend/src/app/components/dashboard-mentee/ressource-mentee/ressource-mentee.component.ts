@@ -49,7 +49,7 @@ export class RessourceMenteeComponent implements OnInit {
           "action": 6,
           "mentee": user.id
         };
-        this.requestService.post("http://127.0.0.1:8000/api/ressources/", data).then(
+        this.requestService.post("https://mentor-me-7viu.onrender.com/api/ressources/", data).then(
           (res: any) => {
             console.log(res)
             this.ressources = res

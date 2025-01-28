@@ -44,7 +44,7 @@ export class SessionMenteeComponent implements OnInit {
           "action": 5,
           "mentee": user.id
         };
-        this.requestService.post("http://127.0.0.1:8000/api/sessions/", data).then(
+        this.requestService.post("https://mentor-me-7viu.onrender.com/api/sessions/", data).then(
           (res: any) => {
             console.log(res)
             this.sessions = res

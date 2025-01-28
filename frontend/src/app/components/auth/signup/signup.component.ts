@@ -32,26 +32,26 @@ export class SignupComponent implements OnInit {
   }
 
   chargeDataMentor() {
-    this.requestService.getAll("http://127.0.0.1:8000/api/domaines_expertise/").then((res: any) => {
+    this.requestService.getAll("https://mentor-me-7viu.onrender.com/api/domaines_expertise/").then((res: any) => {
       this.domaineExpertise = res.results
       console.log(this.domaineExpertise[0].name)
 
-      this.requestService.getAll("http://127.0.0.1:8000/api/qualifications/").then((res: any) => {
+      this.requestService.getAll("https://mentor-me-7viu.onrender.com/api/qualifications/").then((res: any) => {
         this.qualifications = res.results
 
-        this.requestService.getAll("http://127.0.0.1:8000/api/experiences/").then((res: any) => {
+        this.requestService.getAll("https://mentor-me-7viu.onrender.com/api/experiences/").then((res: any) => {
           this.experiences = res.results
 
-          this.requestService.getAll("http://127.0.0.1:8000/api/preferences/").then((res: any) => {
+          this.requestService.getAll("https://mentor-me-7viu.onrender.com/api/preferences/").then((res: any) => {
             this.preferences = res.results
 
-            this.requestService.getAll("http://127.0.0.1:8000/api/langues/").then((res: any) => {
+            this.requestService.getAll("https://mentor-me-7viu.onrender.com/api/langues/").then((res: any) => {
               this.langues = res.results
 
-              this.requestService.getAll("http://127.0.0.1:8000/api/disponibilites/").then((res: any) => {
+              this.requestService.getAll("https://mentor-me-7viu.onrender.com/api/disponibilites/").then((res: any) => {
                 this.disponibilite = res.results
 
-                this.requestService.getAll("http://127.0.0.1:8000/api/niveau_education/").then((res: any) => {
+                this.requestService.getAll("https://mentor-me-7viu.onrender.com/api/niveau_education/").then((res: any) => {
                   this.niveau_education = res.results
                   this.loadingData = false
                   this.changeRole(1)
